@@ -30,51 +30,85 @@
   </head>
   <body>
     <div class="container">
-      <div class="card">
-        <div class="card-body">
-          <h1>Weather Lookup</h1>
+      <div class="card largeMain">
+        <h1>Weather Lookup</h1>
+        <form class="searchForm" id="searchForm">
+          <div class="mb-3 cityName">
+            <div class="row">
+              <label class="form-label">
+                <div class="input-group">
+                  <input
+                    type="search"
+                    class="form-control rounded"
+                    placeholder="Enter City Name"
+                    aria-label="Search"
+                    aria-describedby="search-addon"
+                    id="search-Input"
+                  />
+                  <div class="col-3 cityBarSearch">
+                    <button
+                      class="btn btn-outline-primary btnsearch"
+                      id="btnSearch"
+                    >
+                      Search
+                    </button>
+                  </div>
+                  <div class="col-3">
+                    <button
+                      type="button2"
+                      class="btn btn-success btncurrent"
+                      id="btnCurrent"
+                      name="btncurrent"
+                    >
+                      Current
+                    </button>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </form>
+        <div class="tempRange">
           <div class="row">
             <div class="col-6" id="temp-hi-low">
               <ul>
-                <li>Day Hi</li>
-                <li>Day Low</li>
+                <li class="tempRange" id="temp-Hi">Hi</li>
+                <li class="tempRange" id="temp-Low">Low</li>
               </ul>
             </div>
             <div class="col-6" id="current-Date-Time">
               <ul>
-                <li>Sunday, May 1, 2022</li>
-                <li>9:30 PM PST</li>
+                <li class="date" id="current-Date">Sunday, May 1, 2022</li>
+                <li class="date" id="current-Hour">9:30 PM PST</li>
               </ul>
             </div>
           </div>
         </div>
-        <div>
+
+        <div class="weatherDescription" id="weatherDescription">
           <ul>
-            <li>Icon</li>
-            <li>Maple Valley</li>
-            <li>Mostly Clear</li>
-            <li>70°F</li>
+            <i class="fa-solid fa-moon moonIcon" id="dayIcon"></i>
+            <li id="current-City">Maple Valley</li>
+            <li class=currentDescription id="currentDescription">Mostly Clear</li>
+            <li class="currentTemp" id="currentTemp">70°F</li>
           </ul>
         </div>
         <div class="weatherDetails">
           <div class="row justify-content-md-center">
             <div class="col">
               Humidity
-              <div class="humidityPercent">
-                50%
-              </div>
+              <div class="humidityPercent" id="humidityPercent">50%</div>
             </div>
             <div class="col">
               Wind
-              <div class="windSpeed">
-                5mph
-              </div>
+              <div class="windSpeed" id="windSpeed">5mph</div>
             </div>
           </div>
         </div>
-        </div>
       </div>
+      <small class="footer"> Coded by Carolyn Partsch </small>
     </div>
+
     <script src="src/index.js"></script>
   </body>
 </html>

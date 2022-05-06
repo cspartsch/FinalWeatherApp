@@ -1,3 +1,107 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: linear-gradient(
+    178deg,
+    rgba(201, 234, 252, 0.51) 14.9%,
+    rgba(139, 192, 216, 0.73) 80%
+  );
+}
 h1 {
-  color: blue;
+  padding-top: 20px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #24527a;
+}
+ul {
+  list-style: none;
+}
+
+.largeMain {
+  max-width: 70%;
+  margin: 0 auto;
+  margin-top: 75px;
+  padding: 50px;
+  margin-bottom: 5px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.btncurrent {
+  margin-left: -15px;
+  transition: ease-in-out;
+}
+
+.tempRange {
+  color: #606470;
+  text-align: left;
+  font-weight: 300;
+  font-size: 18px;
+  list-style-type: none;
+}
+.date {
+  text-align: right;
+  list-style-type: none;
+  right: 30px;
+}
+.cityName {
+  text-align: center;
+  padding: 20px;
+}
+
+.weatherDescription {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  text-align: center;
+  margin: 10 auto;
+  display: block;
+  color: #24527a;
+}
+
+.btn-success:hover {
+  color: #28a745;
+  background-color: transparent;
+  transition: ease-in-out 0.15s;
+  border-color: #28a745;
+}
+
+.currentDescription {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  margin: 10 auto;
+  display: block;
+  color: #40a8c4;
+  text-transform: capitalize;
+}
+.weatherDetails {
+  font-family: "Montserrat", sans-serif;
+  font-size: small;
+  color: #606470;
+  display: block;
+  text-align: center;
+}
+.weekReview {
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.weekDays {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  color: #24527a;
+}
+.weatherIcon {
+  color: #40a8c4;
+}
+
+.footer {
+  color: #24527a;
+  padding: 10px;
 }
