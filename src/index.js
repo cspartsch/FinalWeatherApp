@@ -71,7 +71,6 @@ function showTemperature(response) {
   let todayDescription = (document.querySelector(
     "#currentDescription"
   ).innerHTML = response.data.weather[0].description);
-  console.log(todayDescription);
   let tempMax = Math.round(response.data.main.temp_max);
   let tempMin = Math.round(response.data.main.temp_min);
   let humidity = response.data.main.humidity;
@@ -79,11 +78,18 @@ function showTemperature(response) {
     "#humidityPercent"
   ).innerHTML = `${humidity}%`);
   let wind = Math.round(response.data.wind.speed);
-  document.querySelector("#currentTemp").innerHTML = `${temperature}`;
+  let iconElement = document.querySelector("#icon");
+  let iconImage = response.data.weather[0].icon;
+  document.querySelector("#currentTemp").innerHTML = `${temperature}°F`;
   document.querySelector("#windSpeed").innerHTML = `${wind} mph`;
   document.querySelector("#current-City").innerHTML = response.data.name;
   document.querySelector("#temp-Hi").innerHTML = `High: ${tempMax}°F`;
   document.querySelector("#temp-Low").innerHTML = `Low: ${tempMin}°F`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${iconImage}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showPosition(position) {
