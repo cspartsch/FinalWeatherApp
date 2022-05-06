@@ -25,11 +25,21 @@ ul {
   margin: 0 auto;
   margin-top: 75px;
   padding: 50px;
+  border: 30px;
   margin-bottom: 5px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  border-collapse: separate;
 }
 
+.card .card {
+  border-collapse: separate;
+  border-radius: 20px;
+}
+.cardWrapper {
+  text-align: center;
+  border-radius: 20px;
+}
 .btncurrent {
   margin-left: -15px;
   transition: ease-in-out;
@@ -104,4 +114,5 @@ ul {
 .footer {
   color: #24527a;
   padding: 10px;
+  text-align: center;
 }

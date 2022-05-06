@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="src/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/style.scss" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script
       src="https://kit.fontawesome.com/5b740cf747.js"
       crossorigin="anonymous"
@@ -30,87 +32,89 @@
   </head>
   <body>
     <div class="container">
-      <div class="card largeMain">
-        <h1>Weather Lookup</h1>
-        <form class="searchForm" id="searchForm">
-          <div class="mb-3 cityName">
+      <div class="cardWrapper" id="cardWrapper">
+        <div class="card largeMain">
+          <h1>Weather Lookup</h1>
+          <form class="searchForm" id="searchForm">
+            <div class="mb-3 cityName">
+              <div class="row">
+                <label class="form-label">
+                  <div class="input-group">
+                    <input
+                      type="search"
+                      class="form-control rounded"
+                      placeholder="Enter City Name"
+                      aria-label="Search"
+                      aria-describedby="search-addon"
+                      id="search-Input"
+                    />
+                    <div class="col-3 cityBarSearch">
+                      <button
+                        class="btn btn-outline-primary btnsearch"
+                        id="btnSearch"
+                      >
+                        Search
+                      </button>
+                    </div>
+                    <div class="col-3">
+                      <button
+                        type="button2"
+                        class="btn btn-success btncurrent"
+                        id="btnCurrent"
+                        name="btncurrent"
+                      >
+                        Current
+                      </button>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </form>
+          <div class="tempRange">
             <div class="row">
-              <label class="form-label">
-                <div class="input-group">
-                  <input
-                    type="search"
-                    class="form-control rounded"
-                    placeholder="Enter City Name"
-                    aria-label="Search"
-                    aria-describedby="search-addon"
-                    id="search-Input"
-                  />
-                  <div class="col-3 cityBarSearch">
-                    <button
-                      class="btn btn-outline-primary btnsearch"
-                      id="btnSearch"
-                    >
-                      Search
-                    </button>
-                  </div>
-                  <div class="col-3">
-                    <button
-                      type="button2"
-                      class="btn btn-success btncurrent"
-                      id="btnCurrent"
-                      name="btncurrent"
-                    >
-                      Current
-                    </button>
-                  </div>
-                </div>
-              </label>
+              <div class="col-6" id="temp-hi-low">
+                <ul>
+                  <li class="tempRange" id="temp-Hi">Hi</li>
+                  <li class="tempRange" id="temp-Low">Low</li>
+                </ul>
+              </div>
+              <div class="col-6" id="current-Date-Time">
+                <ul>
+                  <li class="date" id="current-Date">Sunday, May 1, 2022</li>
+                  <li class="date" id="current-Hour">9:30 PM PST</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </form>
-        <div class="tempRange">
-          <div class="row">
-            <div class="col-6" id="temp-hi-low">
-              <ul>
-                <li class="tempRange" id="temp-Hi">Hi</li>
-                <li class="tempRange" id="temp-Low">Low</li>
-              </ul>
-            </div>
-            <div class="col-6" id="current-Date-Time">
-              <ul>
-                <li class="date" id="current-Date">Sunday, May 1, 2022</li>
-                <li class="date" id="current-Hour">9:30 PM PST</li>
-              </ul>
+          <div class="weatherDescription" id="weatherDescription">
+            <ul>
+              <img src="" alt="Clear" id="icon" class="float-left" />
+              <li id="current-City">Maple Valley</li>
+              <li class="currentDescription" id="currentDescription">
+                Mostly Clear
+              </li>
+              <li class="currentTemp" id="currentTemp">70°F</li>
+            </ul>
+          </div>
+          <div class="weatherDetails">
+            <div class="row justify-content-md-center">
+              <div class="col">
+                Humidity
+                <div class="humidityPercent" id="humidityPercent">50%</div>
+              </div>
+              <div class="col">
+                Wind
+                <div class="windSpeed" id="windSpeed">5mph</div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="weatherDescription" id="weatherDescription">
-          <ul>
-            <img src="" alt="clear" id="icon" class="float-left" />
-            <li id="current-City">Maple Valley</li>
-            <li class="currentDescription" id="currentDescription">
-              Mostly Clear
-            </li>
-            <li class="currentTemp" id="currentTemp">70°F</li>
-          </ul>
-        </div>
-        <div class="weatherDetails">
-          <div class="row justify-content-md-center">
-            <div class="col">
-              Humidity
-              <div class="humidityPercent" id="humidityPercent">50%</div>
-            </div>
-            <div class="col">
-              Wind
-              <div class="windSpeed" id="windSpeed">5mph</div>
-            </div>
-          </div>
+        <div id="footer">
+          <small class="footer"> open-sourced by carolyn partsch</small>
         </div>
       </div>
-      <small class="footer"> Coded by Carolyn Partsch </small>
     </div>
-
     <script src="src/index.js"></script>
   </body>
 </html>
