@@ -61,8 +61,6 @@ function search(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-search("Seattle");
-
 function searchCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-Input");
@@ -73,7 +71,6 @@ function searchCity(event) {
 }
 
 function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
   let todayDescription = (document.querySelector(
     "#currentDescription"
   ).innerHTML = response.data.weather[0].description);
@@ -86,7 +83,11 @@ function showTemperature(response) {
   let wind = Math.round(response.data.wind.speed);
   let iconElement = document.querySelector("#icon");
   let iconImage = response.data.weather[0].icon;
-  document.querySelector("#currentTemp").innerHTML = `${temperature}°F`;
+  let temperature = document.querySelector("#currentTemp");
+
+  fahrenheitTemperature = Math.round(response.data.main.temp);
+
+  document.querySelector("#currentTemp").innerHTML = `${fahrenheitTemperature}`;
   document.querySelector("#windSpeed").innerHTML = `${wind} mph`;
   document.querySelector("#current-City").innerHTML = response.data.name;
   document.querySelector("#temp-Hi").innerHTML = `High: ${tempMax}°F`;
@@ -115,3 +116,30 @@ function getLocation(event) {
 
 let btncurrent = document.querySelector("#btnCurrent");
 btncurrent.addEventListener("click", getLocation);
+
+function showCelsius(event) {
+  event.preventDefault();
+  let celsiusTemperature = Math.round(((fahrenheitTemperature - 32) * 5) / 9);
+  let temperature = document.querySelector(".currentTemp");
+  temperature.innerHTML = celsiusTemperature;
+  fahrenheit.classList.remove("activeLink");
+  celsius.classList.add("activeLink");
+}
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let temperature = document.querySelector(".currentTemp");
+  currentTemp.innerHTML = fahrenheitTemperature;
+  //temperature.innerHTML = Math.round(fahrenheitTemperature);
+  fahrenheit.classList.add("activeLink");
+  celsius.classList.remove("celsiusLink");
+}
+let fahrenheitTemperature = null;
+
+let celsius = document.querySelector(".celsiusLink");
+celsius.addEventListener("click", showCelsius);
+
+let fahrenheit = document.querySelector(".activeFahrenheitLink");
+fahrenheit.addEventListener("click", showFahrenheit);
+
+search("Seattle");

@@ -66,8 +66,14 @@ ul {
   margin: 10 auto;
   display: block;
   color: #24527a;
+  margin-bottom: 40px;
 }
 
+.degreeSymbol {
+  display: inline;
+  font-size: 15px;
+  cursor: none;
+}
 .btn-success:hover {
   color: #28a745;
   background-color: transparent;
@@ -75,6 +81,9 @@ ul {
   border-color: #28a745;
 }
 
+.btn-success {
+  background-color: #28a745;
+}
 .currentDescription {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
