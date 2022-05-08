@@ -14,8 +14,8 @@ function showCurrentTime() {
   formattedTime.innerHTML = `${hours}:${minutes}`;
   return formattedTime;
 }
-
 showCurrentTime();
+
 function showCurrentDate() {
   let now = new Date();
   let date = now.getDate();
@@ -51,22 +51,28 @@ function showCurrentDate() {
 }
 showCurrentDate();
 
+let searchForm = document.querySelector("#searchForm");
+searchForm.addEventListener("submit", searchCity);
+
+function search(city) {
+  let units = "imperial";
+  let apiKey = "91f41f9a3182f09b51571aedfc243a1c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+search("Seattle");
+
 function searchCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-Input");
   let currentCity = document.querySelector("#current-City");
-  currentCity.innerHTML = `${searchInput.value}`;
-  let units = "imperial";
-  let apiKey = "91f41f9a3182f09b51571aedfc243a1c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=${units}`;
-  console.log(apiUrl);
-  axios.get(apiUrl).then(showTemperature);
+  let city = searchInput.value;
+  currentCity.innerHTML = city;
+  search(city);
 }
-let searchForm = document.querySelector("#searchForm");
-searchForm.addEventListener("submit", searchCity);
 
 function showTemperature(response) {
-  console.log(response);
   let temperature = Math.round(response.data.main.temp);
   let todayDescription = (document.querySelector(
     "#currentDescription"

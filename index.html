@@ -13,7 +13,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
-    <link rel="stylesheet" href="src/style.scss" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script
       src="https://kit.fontawesome.com/5b740cf747.js"
@@ -48,7 +47,7 @@
                       aria-describedby="search-addon"
                       id="search-Input"
                     />
-                    <div class="col-3 cityBarSearch">
+                    <div class="col-2 cityBarSearch">
                       <button
                         class="btn btn-outline-primary btnsearch"
                         id="btnSearch"
@@ -56,7 +55,7 @@
                         Search
                       </button>
                     </div>
-                    <div class="col-3">
+                    <div class="col-2 currentLocation">
                       <button
                         type="button2"
                         class="btn btn-success btncurrent"
@@ -90,7 +89,7 @@
           <div class="weatherDescription" id="weatherDescription">
             <ul>
               <img src="" alt="Clear" id="icon" class="float-left" />
-              <li id="current-City">Maple Valley</li>
+              <li id="current-City"></li>
               <li class="currentDescription" id="currentDescription">
                 Mostly Clear
               </li>

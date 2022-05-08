@@ -32,10 +32,6 @@ ul {
   border-collapse: separate;
 }
 
-.card .card {
-  border-collapse: separate;
-  border-radius: 20px;
-}
 .cardWrapper {
   text-align: center;
   border-radius: 20px;
