@@ -67,47 +67,61 @@ ul {
   display: block;
   color: #24527a;
   margin-bottom: 40px;
+  text-decoration: none;
 }
 
 .weatherDescription .units {
-  font-size: 12px;
+  font-size: 16px;
   top: -15px;
   left: 50px;
   text-decoration: none;
   position: relative;
+  cursor: default;
+  transition: all 150ms ease-in-out;
 }
 
 .weatherDescription .units .activeFahrenheitLink {
   color: #24527a;
-  font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   cursor: default;
-}
-
-.weatherDescription .units .activeFahrenheitLink:hover {
-  color: #24527a;
-  font-size: 20px;
-  text-decoration: none;
-  cursor: default;
+  transition: all 150ms ease-in-out;
 }
 
 .weatherDescription .units .celsiusLink {
-  color: #24527a;
-  font-size: 14px;
+  color: #606470;
+  font-size: 16px;
   text-decoration: none;
   cursor: default;
+  transition: all 150ms ease-in-out;
 }
+
+.weatherDescription .units a.activeFahrenheitLink {
+  font-weight: 700;
+}
+
+.weatherDescription .units .activeFahrenheitLink:hover {
+  color: #40a8c4;
+  font-size: 20px;
+  font-weight: bolder;
+  text-decoration: none;
+  cursor: default;
+  transition: all 150ms ease-in-out;
+}
+
 .weatherDescription .units .celsiusLink:hover {
-  color: #24527a;
+  color: #40a8c4;
+  font-weight: bolder;
   font-size: 20px;
   text-decoration: none;
   cursor: default;
+  transition: all 150ms ease-in-out;
 }
 
 .weatherDescription .units .divider {
   margin-left: 5px;
 }
+
 .currentTemp {
   margin-right: -55px;
   font-size: 30px;
@@ -148,9 +162,6 @@ ul {
   margin: 0 auto;
   text-align: center;
   color: #24527a;
-}
-.weatherIcon {
-  color: #40a8c4;
 }
 
 .footer {
