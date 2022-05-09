@@ -88,8 +88,8 @@ ul {
   transition: all 150ms ease-in-out;
 }
 
-.weatherDescription .units .celsiusLink {
-  color: #606470;
+.weatherDescription .units .celsiusElement {
+  color: red;
   font-size: 16px;
   text-decoration: none;
   cursor: default;
@@ -101,7 +101,7 @@ ul {
 }
 
 .weatherDescription .units .activeFahrenheitLink:hover {
-  color: #40a8c4;
+  color: #24527a;
   font-size: 20px;
   font-weight: bolder;
   text-decoration: none;
@@ -110,14 +110,38 @@ ul {
 }
 
 .weatherDescription .units .celsiusLink:hover {
-  color: #40a8c4;
+  color: #24527a;
+  font-size: 20px;
+  font-weight: bolder;
+  text-decoration: none;
+  cursor: default;
+  transition: all 150ms ease-in-out;
+}
+
+.weatherDescription .units .celsiusLink:focus {
+  color: #24527a;
+  font-size: 20px;
+  font-weight: bolder;
+  text-decoration: none;
+  cursor: default;
+  transition: all 150ms ease-in-out;
+}
+.weatherDescription .units .celsiusLink:visited {
+  color: #24527a;
   font-weight: bolder;
   font-size: 20px;
   text-decoration: none;
   cursor: default;
   transition: all 150ms ease-in-out;
 }
-
+.weatherDescription .units .celsiusLink:active {
+  color: #24527a;
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: default;
+  transition: all 150ms ease-in-out;
+}
 .weatherDescription .units .divider {
   margin-left: 5px;
 }
