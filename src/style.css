@@ -63,16 +63,54 @@ ul {
   font-weight: 500;
   font-size: 30px;
   text-align: center;
-  margin: 10 auto;
+  margin: 0 auto;
   display: block;
   color: #24527a;
   margin-bottom: 40px;
 }
 
-.degreeSymbol {
-  display: inline;
-  font-size: 15px;
-  cursor: none;
+.weatherDescription .units {
+  font-size: 12px;
+  top: -15px;
+  left: 50px;
+  text-decoration: none;
+  position: relative;
+}
+
+.weatherDescription .units .activeFahrenheitLink {
+  color: #24527a;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: default;
+}
+
+.weatherDescription .units .activeFahrenheitLink:hover {
+  color: #24527a;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: default;
+}
+
+.weatherDescription .units .celsiusLink {
+  color: #24527a;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: default;
+}
+.weatherDescription .units .celsiusLink:hover {
+  color: #24527a;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: default;
+}
+
+.weatherDescription .units .divider {
+  margin-left: 5px;
+}
+.currentTemp {
+  margin-right: -55px;
+  font-size: 30px;
 }
 .btn-success:hover {
   color: #28a745;
@@ -80,7 +118,6 @@ ul {
   transition: ease-in-out 0.15s;
   border-color: #28a745;
 }
-
 .btn-success {
   background-color: #28a745;
 }
