@@ -35,7 +35,7 @@
           <h1>Weather Lookup</h1>
           <form class="searchForm" id="searchForm">
             <div class="mb-3 cityName">
-              <div class="row">
+              <div class="row searchRow">
                 <label class="form-label">
                   <div class="input-group">
                     <input
@@ -46,7 +46,7 @@
                       aria-describedby="search-addon"
                       id="search-Input"
                     />
-                    <div class="col-2 cityBarSearch">
+                    <div class="col-3 cityBarSearch">
                       <button
                         class="btn btn-outline-primary btnsearch"
                         id="btnSearch"
@@ -117,6 +117,10 @@
                 Wind
                 <div class="windSpeed" id="windSpeed">5mph</div>
               </div>
+              <div class="col">
+                Precipitation
+                <div class="precipitation" id="precipitation">30%</div>
+              </div>
             </div>
           </div>
         </div>
@@ -125,6 +129,7 @@
             <a
               href="https://github.com/cspartsch/FinalWeatherApp"
               target="_blank"
+              class="footerLink"
               >open-sourced</a
             >
             by carolyn partsch</small

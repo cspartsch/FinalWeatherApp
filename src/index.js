@@ -70,6 +70,16 @@ function searchCity(event) {
   search(city);
 }
 
+function displayForecast(response) {
+  console.log(response);
+}
+
+function getForecast(coordinates) {
+  let units = "imperial";
+  let apiKey = "91f41f9a3182f09b51571aedfc243a1c";
+  let apiUrl = `api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
+}
+
 function showTemperature(response) {
   let todayDescription = (document.querySelector(
     "#currentDescription"
@@ -85,6 +95,7 @@ function showTemperature(response) {
   let iconImage = response.data.weather[0].icon;
   let temperature = document.querySelector("#currentTemp");
 
+  console.log(response);
   fahrenheitTemperature = Math.round(response.data.main.temp);
 
   document.querySelector("#currentTemp").innerHTML = `${fahrenheitTemperature}`;
@@ -97,6 +108,8 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${iconImage}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function showPosition(position) {

@@ -21,7 +21,7 @@ ul {
 }
 
 .largeMain {
-  max-width: 70%;
+  max-width: 800px;
   margin: 0 auto;
   margin-top: 75px;
   padding: 50px;
@@ -37,10 +37,19 @@ ul {
   border-radius: 20px;
 }
 .btncurrent {
-  margin-left: -15px;
+  margin-left: -80px;
   transition: ease-in-out;
 }
-
+.searchRow {
+  margin: 0 auto;
+}
+.btnsearch {
+  right: 15px;
+}
+.input-group {
+  width: 600px;
+  margin: 0 auto;
+}
 .tempRange {
   color: #606470;
   text-align: left;
@@ -71,33 +80,26 @@ ul {
 }
 
 .weatherDescription .units {
-  font-size: 16px;
+  font-size: 14px;
   top: -15px;
-  left: 50px;
+  left: 75px;
   text-decoration: none;
   position: relative;
   cursor: default;
   transition: all 150ms ease-in-out;
+  color: #24527a;
 }
 
 .weatherDescription .units .activeFahrenheitLink {
   color: #24527a;
-  font-size: 16px;
-  text-decoration: none;
-  cursor: default;
-  transition: all 150ms ease-in-out;
-}
-
-.weatherDescription .units .celsiusElement {
-  color: red;
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: none;
   cursor: default;
   transition: all 150ms ease-in-out;
 }
 
 .weatherDescription .units a.activeFahrenheitLink {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .weatherDescription .units .activeFahrenheitLink:hover {
@@ -147,7 +149,7 @@ ul {
 }
 
 .currentTemp {
-  margin-right: -55px;
+  margin-right: -80px;
   font-size: 30px;
 }
 .btn-success:hover {
@@ -168,6 +170,7 @@ ul {
   display: block;
   color: #40a8c4;
   text-transform: capitalize;
+  margin-bottom: -12px;
 }
 .weatherDetails {
   font-family: "Montserrat", sans-serif;
@@ -192,4 +195,19 @@ ul {
   color: #24527a;
   padding: 10px;
   text-align: center;
+  text-decoration: none;
+}
+.footerLink {
+  text-decoration: none;
+  color: #24527a;
+}
+
+.footerLink:hover {
+  color: #40a8c4;
+  font: 30px;
+  transition: all 150ms ease-in-out;
+  background-color: transparent;
+  font-weight: bolder;
+  text-decoration: none;
+  cursor: default;
 }
