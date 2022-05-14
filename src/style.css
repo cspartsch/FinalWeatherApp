@@ -178,6 +178,7 @@ ul {
   color: #606470;
   display: block;
   text-align: center;
+  margin-bottom: 20px;
 }
 .weekReview {
   margin: 0 auto;
@@ -191,6 +192,13 @@ ul {
   color: #24527a;
 }
 
+.forecastInfo {
+  color: #24527a;
+}
+
+.forecastDisplay {
+  margin: 0 auto;
+}
 .footer {
   color: #24527a;
   padding: 10px;
