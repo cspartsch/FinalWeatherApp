@@ -77,6 +77,7 @@ ul {
   color: #24527a;
   margin-bottom: 40px;
   text-decoration: none;
+  
 }
 
 .card-temp-min {
@@ -179,6 +180,13 @@ ul {
   margin-right: -80px;
   font-size: 30px;
 }
+
+.humidityIcon,
+.windIcon,
+.uvIndexIcon {
+  width: 20px;
+}
+
 .btn-success:hover {
   color: #28a745;
   background-color: transparent;
