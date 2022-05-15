@@ -101,7 +101,7 @@ function displayForecast(response) {
                   )}°<span>
                   <div>
                     <img
-          src="http://openweathermap.org/img/wn/${
+          src="https://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
           }@2x.png"
           alt=""
@@ -165,7 +165,7 @@ function showTemperature(response) {
   document.querySelector("#temp-Low").innerHTML = `Low: ${tempMin}°F`;
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${iconImage}@2x.png`
+    `https://openweathermap.org/img/wn/${iconImage}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
