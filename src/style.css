@@ -79,6 +79,9 @@ ul {
   text-decoration: none;
 }
 
+.card-temp-min {
+  color: #878787;
+}
 .weatherDescription .units {
   font-size: 14px;
   top: -15px;
