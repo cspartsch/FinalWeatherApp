@@ -51,9 +51,6 @@ function showCurrentDate() {
 }
 showCurrentDate();
 
-let searchForm = document.querySelector("#searchForm");
-searchForm.addEventListener("submit", searchCity);
-
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -72,10 +69,12 @@ function formatDay(timestamp) {
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecastInfo");
+  let uvIndexElement = Math.round(response.data.current.uvi);
+  document.querySelector("#uvIndex").innerHTML = `${uvIndexElement}`;
   let forecastHTML = `<div class="row">`;
   console.log(response);
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index > 0 && index < 6) {
       forecastHTML =
         forecastHTML +
         `
@@ -161,6 +160,7 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord);
+  console.log(response);
 }
 
 function showPosition(position) {
@@ -184,10 +184,10 @@ btncurrent.addEventListener("click", getLocation);
 function showCelsius(event) {
   event.preventDefault();
   let celsiusTemperature = Math.round(((fahrenheitTemperature - 32) * 5) / 9);
-  let temperature = document.querySelector(".currentTemp");
-  temperature.innerHTML = celsiusTemperature;
+  let temperature = document.querySelector("#currentTemp");
   fahrenheit.classList.remove("activeLink");
   celsius.classList.add("activeLink");
+  temperature.innerHTML = celsiusTemperature;
 }
 
 function showFahrenheit(event) {
@@ -199,6 +199,9 @@ function showFahrenheit(event) {
   celsius.classList.remove("celsiusLink");
 }
 let fahrenheitTemperature = null;
+
+let searchForm = document.querySelector("#searchForm");
+searchForm.addEventListener("submit", searchCity);
 
 let celsius = document.querySelector(".celsiusLink");
 celsius.addEventListener("click", showCelsius);
