@@ -15,6 +15,7 @@ h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: #24527a;
+  text-transform: uppercase;
 }
 ul {
   list-style: none;
@@ -77,6 +78,7 @@ ul {
   color: #24527a;
   margin-bottom: 40px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .card-temp-min {
@@ -200,14 +202,14 @@ ul {
 }
 .currentDescription {
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 28px;
   text-align: center;
   margin: 10 auto;
   display: block;
   color: #40a8c4;
-  text-transform: capitalize;
-  margin-bottom: -12px;
+  text-transform: uppercase;
+  margin-bottom: -21px;
 }
 .weatherDetails {
   font-family: "Montserrat", sans-serif;
@@ -229,13 +231,23 @@ ul {
   color: #24527a;
 }
 
+.card-title {
+  margin-top: 10px;
+}
 .forecastInfo {
   color: #24527a;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .forecastDisplay {
   margin: 0 auto;
+  height: 120px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-top: 3px;
 }
+
 .footer {
   color: #24527a;
   padding: 10px;

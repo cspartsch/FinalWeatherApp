@@ -64,15 +64,7 @@ showCurrentDate();
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
 
   return days[day];
 }
@@ -101,11 +93,9 @@ function displayForecast(response) {
                   )}°<span>
                   <div>
                     <img
-          src="https://openweathermap.org/img/wn/${
-            forecastDay.weather[0].icon
-          }@2x.png"
+          src="images/${forecastDay.weather[0].icon}.png"
           alt=""
-          width="42"
+          width="30"
         />
                   </div>
                 </div>
