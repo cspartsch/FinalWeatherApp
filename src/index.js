@@ -166,7 +166,6 @@ function showTemperature(response) {
   iconElement.setAttribute(
     "src",
     `images/${response.data.weather[0].icon}.png`
-    //`https://openweathermap.org/img/wn/${iconImage}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
