@@ -185,18 +185,17 @@ function showCelsius(event) {
   event.preventDefault();
   let celsiusTemperature = Math.round(((fahrenheitTemperature - 32) * 5) / 9);
   let temperature = document.querySelector("#currentTemp");
-  fahrenheit.classList.remove("activeLink");
-  celsius.classList.add("activeLink");
+  fahrenheit.classList.remove("active-link");
+  celsius.classList.add("active-link");
   temperature.innerHTML = celsiusTemperature;
 }
 
 function showFahrenheit(event) {
   event.preventDefault();
-  let temperature = document.querySelector(".currentTemp");
+  let temperature = document.querySelector("#currentTemp");
+  fahrenheit.classList.add("active-link");
+  celsius.classList.remove("active-link");
   currentTemp.innerHTML = fahrenheitTemperature;
-  //temperature.innerHTML = Math.round(fahrenheitTemperature);
-  fahrenheit.classList.add("activeLink");
-  celsius.classList.remove("celsiusLink");
 }
 let fahrenheitTemperature = null;
 

@@ -93,13 +93,36 @@ ul {
 .weatherDescription .units .activeFahrenheitLink {
   color: #24527a;
   font-size: 14px;
+  font-weight: bolder;
   text-decoration: none;
   cursor: default;
   transition: all 150ms ease-in-out;
 }
 
-.weatherDescription .units a.activeFahrenheitLink {
-  font-weight: 600;
+.weatherDescription .units .activeFahrenheitLink:focus {
+  color: #24527a;
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: default;
+  transition: all 150ms ease-in-out;
+}
+
+.weatherDescription .units .activeFahrenheitLink:visited {
+  color: #24527a;
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: default;
+  transition: all 150ms ease-in-out;
+}
+.weatherDescription .units .activeFahrenheitLink:active {
+  color: #24527a;
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: default;
+  transition: all 150ms ease-in-out;
 }
 
 .weatherDescription .units .activeFahrenheitLink:hover {
@@ -144,6 +167,7 @@ ul {
   cursor: default;
   transition: all 150ms ease-in-out;
 }
+
 .weatherDescription .units .divider {
   margin-left: 5px;
 }
