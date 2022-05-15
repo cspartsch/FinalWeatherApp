@@ -1,17 +1,27 @@
 function showCurrentTime() {
   let now = new Date();
   let date = now.getDate();
-
   let hours = now.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
+  let amOrPm = "";
+  if (hours >= 12) {
+    amOrPm = "PM";
+  } else {
+    amOrPm = "AM";
+  }
+
+  if (hours > 0 && hours <= 12) {
+    hours = hours;
+  } else if (hours > 12) {
+    hours = hours - 12;
+  } else if (hours == 0) {
+    hours = "12";
   }
   let minutes = now.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
   let formattedTime = document.querySelector("#current-Hour");
-  formattedTime.innerHTML = `${hours}:${minutes}`;
+  formattedTime.innerHTML = `${hours}:${minutes} ${amOrPm}`;
   return formattedTime;
 }
 showCurrentTime();
