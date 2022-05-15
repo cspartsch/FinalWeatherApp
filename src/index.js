@@ -165,7 +165,8 @@ function showTemperature(response) {
   document.querySelector("#temp-Low").innerHTML = `Low: ${tempMin}°F`;
   iconElement.setAttribute(
     "src",
-    `https://openweathermap.org/img/wn/${iconImage}@2x.png`
+    `images/${response.data.weather[0].icon}.png`
+    //`https://openweathermap.org/img/wn/${iconImage}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 

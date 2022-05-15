@@ -77,7 +77,6 @@ ul {
   color: #24527a;
   margin-bottom: 40px;
   text-decoration: none;
-  
 }
 
 .card-temp-min {
@@ -187,6 +186,9 @@ ul {
   width: 20px;
 }
 
+.icon {
+  width: 90px;
+}
 .btn-success:hover {
   color: #28a745;
   background-color: transparent;
