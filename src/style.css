@@ -3,11 +3,7 @@ html {
   width: 100%;
 }
 body {
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(145, 217, 243) 0%,
-    rgb(147, 164, 243) 90%
-  );
+  background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 }
 h1 {
   text-align: center;
@@ -271,26 +267,23 @@ ul {
   font-size: 12px;
 }
 .footer {
-  color: #24527a;
+  color: #e0ebeb;
   padding: 8px;
   text-align: center;
   text-decoration: none;
 }
 .footerLink {
   text-decoration: none;
-  color: #24527a;
+  color: #e0ebeb;
 }
 
 .footerLink:hover {
-  color: #2b4353;
-  font: 30px;
+  color: #fdd020;
+  font-size: 16px;
   transition: all 150ms ease-in-out;
   background-color: transparent;
   font-weight: bolder;
   text-decoration: none;
   cursor: pointer;
-}
-.iconOwner {
-  font: 14px;
-  color: #24527a;
+  transition: all 150ms ease-in-out;
 }
