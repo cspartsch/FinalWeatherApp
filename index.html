@@ -39,7 +39,7 @@
     <div class="container">
       <div class="cardWrapper" id="cardWrapper">
         <div class="card largeMain">
-          <h1>Weather Lookup</h1>
+          <h1>Weather Search</h1>
           <form class="searchForm" id="searchForm">
             <div class="mb-3 cityName">
               <div class="row searchRow">
@@ -53,7 +53,7 @@
                       aria-describedby="search-addon"
                       id="search-Input"
                     />
-                    <div class="col-3 cityBarSearch">
+                    <div class="col-2 cityBarSearch">
                       <button
                         class="btn btn-outline-primary btnsearch"
                         id="btnSearch"
@@ -61,14 +61,15 @@
                         Search
                       </button>
                     </div>
-                    <div class="col-2 currentLocation">
+                    <div class="col-3 currentLocation">
                       <button
                         type="button2"
                         class="btn btn-success btncurrent"
                         id="btnCurrent"
                         name="btncurrent"
                       >
-                        Current
+                       Location
+                        <i class="fa-solid fa-location-dot"></i>
                       </button>
                     </div>
                   </div>
@@ -117,7 +118,7 @@
           </div>
           <div class="weatherDetails">
             <div class="row justify-content-md-center">
-              <div class="col">
+              <div class="col-3">
                 <img
                   src="images/028-humidity.png"
                   alt="Humidity"
@@ -127,7 +128,7 @@
                 Humidity
                 <div class="humidityPercent" id="humidityPercent"></div>
               </div>
-              <div class="col">
+              <div class="col-2">
                 <img
                   src="images/025-windy-1.png"
                   alt="Wind"
@@ -137,7 +138,7 @@
                 Wind
                 <div class="windSpeed" id="windSpeed"></div>
               </div>
-              <div class="col">
+              <div class="col-3">
                 <img
                   src="images/038-sun-1.png"
                   alt="uvIndex"
@@ -159,16 +160,15 @@
               class="footerLink"
               >open-sourced</a
             >
-            by carolyn partsch</small
-          >
+            by carolyn partsch
           <div>
-            Icons made by
-            <a href="https://www.flaticon.com/authors/iconixar" title="iconixar"
+            icons made by
+            <a href="https://www.flaticon.com/authors/iconixar" title="iconixar" class="footerLink" target="_blank"
               >iconixar</a
             >
             from
-            <a href="https://www.flaticon.com/" title="Flaticon"
-              >www.flaticon.com</a
+            <a href="https://www.flaticon.com/" title="Flaticon" class="footerLink" target="_blank"
+              >www.flaticon.com</a></small
             >
           </div>
         </div>

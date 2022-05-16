@@ -82,7 +82,9 @@ function displayForecast(response) {
         `
         <div class="col card-column">
         <div class="card forecastDisplay">
-              <div class="card-title">${formatDay(forecastDay.dt)}</div>
+              <div class="card-title"><strong>${formatDay(
+                forecastDay.dt
+              )}</strong></div>
               <div class="card border-0 h-100">
                 <div class="text-center card-content">
                   <span class="card-temp-max">${Math.round(
@@ -97,6 +99,8 @@ function displayForecast(response) {
           alt=""
           width="30"
         />
+        <div class="forecastDescription">${forecastDay.weather[0].main}
+                  </div>
                   </div>
                 </div>
               </div>
